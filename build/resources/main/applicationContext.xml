@@ -11,4 +11,8 @@
           class="hello.RapMusic">
     </bean>
 
+    <bean id="musicPlayer" class="hello.MusicPlayer">
+        <constructor-arg ref="musicBean" />
+    </bean>
+
 </beans>
