@@ -19,7 +19,8 @@
           class="hello.HipHopMusic">
     </bean>
 
-    <bean id="musicPlayer" class="hello.MusicPlayer">
+    <bean id="musicPlayer" class="hello.MusicPlayer"
+                            scope="prototype">
         <property name="musicList">
             <list>
                 <ref bean="musicBeanClassical"/>
