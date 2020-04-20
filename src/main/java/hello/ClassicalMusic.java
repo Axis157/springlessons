@@ -2,24 +2,19 @@ package hello;
 
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 public class ClassicalMusic implements Music {
-    private ClassicalMusic() {}
-
-    public static ClassicalMusic getClassicalMusic(){
-        return new ClassicalMusic();
+    List<String> listMusic = new ArrayList<>();
+    {
+        listMusic.add("classical1");
+        listMusic.add("classical2");
+        listMusic.add("classical3");
     }
-
-    public void doMyInit() {
-        System.out.println("Doing my initialization");
-    }
-
-    public void doMyDestroy() {
-        System.out.println("Doing my destruction");
-    }
-
     @Override
-    public String getSong() {
-        return "Classical Music";
+    public List<String> getSongs() {
+        return listMusic;
     }
 }
